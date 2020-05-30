@@ -18,7 +18,7 @@ export default function LocateUserFAB() {
             coords: { latitude, longitude, } }) => {
 
             try {
-                const getCoordsDetail = await fetch(`http://open.mapquestapi.com/geocoding/v1/reverse?key=F7jn7dokuPcI8V0goq79ykrAFC1k2hew&location=${latitude},${longitude}&includeRoadMetadata=true&includeNearestIntersection=true`)
+                const getCoordsDetail = await fetch(`https://open.mapquestapi.com/geocoding/v1/reverse?key=F7jn7dokuPcI8V0goq79ykrAFC1k2hew&location=${latitude},${longitude}&includeRoadMetadata=true&includeNearestIntersection=true`)
 
                 const queryResults = await getCoordsDetail.json();
                 const coordsDetails = queryResults.results[0].locations[0]
