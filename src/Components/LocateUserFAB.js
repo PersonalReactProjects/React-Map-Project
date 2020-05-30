@@ -17,11 +17,15 @@ export default function LocateUserFAB() {
         const onSuccess = async ({
             coords: { latitude, longitude, } }) => {
 
-            const getCoordsDetail = await fetch(`http://open.mapquestapi.com/geocoding/v1/reverse?key=F7jn7dokuPcI8V0goq79ykrAFC1k2hew&location=${latitude},${longitude}&includeRoadMetadata=true&includeNearestIntersection=true`)
+            try {
+                const getCoordsDetail = await fetch(`http://open.mapquestapi.com/geocoding/v1/reverse?key=F7jn7dokuPcI8V0goq79ykrAFC1k2hew&location=${latitude},${longitude}&includeRoadMetadata=true&includeNearestIntersection=true`)
 
-            const queryResults = await getCoordsDetail.json();
-            const coordsDetails = queryResults.results[0].locations[0]
-            dispatch({ type: 'GET_LOCATION_SUCCESS', payload: { latitude, longitude, coordsDetails } });
+                const queryResults = await getCoordsDetail.json();
+                const coordsDetails = queryResults.results[0].locations[0]
+                dispatch({ type: 'GET_LOCATION_SUCCESS', payload: { latitude, longitude, coordsDetails } });
+            } catch (error) {
+                console.log('fetch error', error)
+            }
 
         }
         const onError = (error) => {
