@@ -1,0 +1,28 @@
+.popupdetail {
+  position: fixed;
+  /* display: none; */
+  /* background: white; */
+  color: blue;
+  min-width: 200px;
+  height: 50px;
+  /* text-align: center; */
+  /* line-height: 1; */
+  /* font-size: 16px; */
+  bottom: 100px;
+  border-radius: 3px;
+  left: 18px;
+
+  transition: background 0.5s;
+  z-index: 11;
+  cursor: pointer;
+  padding-top: 5px;
+}
+
+@media (max-width: 768px) {
+  .popupdetail {
+    left: -17px;
+  }
+}
+.text-description {
+  color: blue;
+}

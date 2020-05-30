@@ -1,0 +1,24 @@
+.basic {
+  position: fixed;
+  /* display: none; */
+  background: white;
+  color: blue;
+  width: 44px;
+  height: 44px;
+  text-align: center;
+  line-height: 1;
+  font-size: 16px;
+  border-radius: 50%;
+  left: 20px;
+  transition: background 0.5s;
+  z-index: 11;
+  cursor: pointer;
+  bottom: 70px;
+  padding-top: 12px;
+}
+
+@media (max-width: 768px) {
+  .basic {
+    bottom: 30px;
+  }
+}

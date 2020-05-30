@@ -1,0 +1,8 @@
+.mapview-container {
+  height: 100vh;
+  width: 100vw;
+}
+
+.spinner-loader {
+  color: white;
+}

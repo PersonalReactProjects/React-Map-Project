@@ -1,0 +1,13 @@
+.marker {
+  position: fixed;
+  bottom: 20;
+}
+.marker-image {
+  width: 13px;
+  transition: 0.3s ease;
+}
+.marker-image:hover {
+  width: 20px;
+  transition: 0.9s ease;
+  transform: scale(1.1);
+}
