@@ -26,6 +26,8 @@ export default function LocateUserFAB() {
         }
         const onError = (error) => {
             dispatch({ type: 'GET_LOCATION_FAIL', payload: error });
+            console.log(error);
+
         }
         navigator.geolocation.getCurrentPosition(onSuccess, onError, options);
     }
